@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+
+void three(){
+    
+    int x,y,z,sum;
+    cin>>x;
+    cin>>y;
+    cin>>z;
+   
+   int max = ( x < y ) ? y : x;
+   int M=( max < z ) ? z : max ;
+    sum=((x+y+z)-M)-M;
+    
+    if(sum==0){
+        cout<<"yes";
+    }
+        else{
+            cout<<"no";
+        }
+    return ;
+}
+
+int main() {
+    int i,t;
+    cin>>t;
+    for(i=0;i<t;i++){
+        three();
+        cout<<endl;
+    }
+return 0;
+}
