@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+
+void flip(){
+    
+    int N,K,i,upper=0,lower=0;
+    cin>>N;
+    cin>>K;
+    cout<<endl;
+    char s[N];
+    for(i=0;i<N;i++){
+        cin>>s[i];
+    }
+    
+   for (i=0;i<N;i++){
+       if(s[i]>='A' && s[i]<='Z'){
+           upper++;
+           
+       }
+       else{
+           lower++;
+       }
+   }
+  if(upper<=K && lower<=K){
+         cout<<"both";
+     }
+       else if(upper<=K){
+           cout<<"chef";
+       }
+     else if(lower<=K){
+         cout<<"brother";
+     }
+     
+     else{
+         cout<<"none";
+     }
+ }
+int main() {
+    int i,t;
+    cin>>t;
+    for(i=0;i<t;i++){
+          flip();
+        cout<<endl;
+    }
+return 0;
+}
