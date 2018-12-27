@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+
+void code(){
+    
+    int N,K,i,one=0,flag=0;;
+   cin>>N;
+   int A[N];
+   for(i=0;i<N;i++){
+       cin>>A[i];
+   }
+  for(i=0;i<N;i++){
+      if(A[i]==0){
+          one-=1;
+      }
+      else{
+          one+=1;
+      }
+      if(one<0){
+          flag=1;
+      }
+  }
+ 
+  if(flag==1 ){
+      cout<<"Invalid";
+  }
+  else{
+      cout<<"Valid";
+  }
+  
+
+}
+ int main() {
+    int i,t;
+    cin>>t;
+    for(i=0;i<t;i++){
+         code();
+        cout<<endl;
+    }
+return 0;
+}
